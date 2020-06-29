@@ -671,6 +671,7 @@ address {
 
 .work-accents {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -832,6 +833,7 @@ address {
 
 .teampeople {
   padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
 }
 
@@ -890,6 +892,7 @@ address {
 .teampeople .teampeople-card {
   width: 100%;
   padding-bottom: 24px;
+  margin: 15px;
   background: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -900,7 +903,6 @@ address {
 @media screen and (min-width: 768px) {
   .teampeople .teampeople-card {
     width: calc((100% - 2 * 30px) / 2);
-    margin: 15px;
   }
 }
 
@@ -914,6 +916,171 @@ address {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   overflow: hidden;
+}
+
+.teampeople-icons {
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  fill: #afb1b8;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teampeople-icons:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .teampeople-icons:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+.teampeople-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.teampeople-icons-container > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.teampeople-icons > a {
+  fill: inherit;
+}
+
+.teampeople-icons svg {
+  width: 20px;
+  height: 20px;
+}
+
+.teampeople-icons:hover, .teampeople-icons:focus {
+  background-color: #2196f3;
+  fill: #ffffff;
+  cursor: pointer;
+}
+
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.clients h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients h2 {
+    margin-bottom: 50px;
+  }
+}
+
+.clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
+}
+
+.clients-card {
+  margin: 15px;
+  height: 90px;
+  width: calc((100% - 2 * 30px) / 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .clients-card {
+    width: 210px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-card {
+    width: 170px;
+  }
+}
+
+.clients-card:hover, .clients-card:focus {
+  border-color: #2196f3;
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+.clients-link {
+  fill: inherit;
+}
+
+.clients-link > .logo-1 {
+  width: 44px;
+  height: 49px;
+}
+
+.clients-link > .logo-2 {
+  width: 40px;
+  height: 52px;
+}
+
+.clients-link > .logo-3 {
+  width: 41px;
+  height: 43px;
+}
+
+.clients-link > .logo-4 {
+  width: 80px;
+  height: 42px;
+}
+
+.clients-link > .logo-5 {
+  width: 59px;
+  height: 47px;
+}
+
+.clients-link > .logo-6 {
+  width: 88px;
+  height: 45px;
 }
 
 .backdrop {

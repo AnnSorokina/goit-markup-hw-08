@@ -1,5 +1,6 @@
 .teampeople {
   padding-top: 60px;
+  padding-bottom: 60px;
 
   background-color: $backgroundBlocksColor;
 
@@ -42,6 +43,8 @@
   .teampeople-card {
     width: 100%;
     padding-bottom: 24px;
+    margin: 15px;
+
     background: $titleTextColor;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -50,7 +53,6 @@
 
     @media screen and (min-width: $tablet) {
       width: calc((100% - 2 * 30px) / 2);
-      margin: 15px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -65,44 +67,52 @@
   }
 }
 
-// .teampeople-icons {
-//   width: 44px;
-//   height: 44px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 50%;
+.teampeople-icons {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 
-//   background-color: transparent;
-//   fill: $svgColor;
-//   transition: background-color $trDuration $timingFn, fill $trDuration $timingFn;
+  background-color: transparent;
+  fill: $svgColor;
+  transition: background-color $trDuration $timingFn, fill $trDuration $timingFn;
 
-//   &:not(:last-child) {
-//     margin-right: 10px;
-//   }
+  &:not(:last-child) {
+    margin-right: 10px;
 
-//   &-container {
-//     display: flex;
-//     justify-content: space-between;
-//     margin: 0 32px;
-//   }
+    @media screen and (min-width: $tablet) {
+      margin-right: 12px;
+    }
+  }
 
-//   & > a {
-//     fill: inherit;
-//   }
+  &-container {
+    display: flex;
+    // justify-content: space-between;
+    // margin: 0 32px;
+  }
 
-//   svg {
-//     width: 20px;
-//     height: 20px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
+  &-container > ul {
+    display: flex;
+  }
 
-//   &:hover,
-//   &:focus {
-//     background-color: $accentColor;
-//     fill: $titleTextColor;
-//     cursor: pointer;
-//   }
-// }
+  & > a {
+    fill: inherit;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    fill: $titleTextColor;
+    cursor: pointer;
+  }
+}

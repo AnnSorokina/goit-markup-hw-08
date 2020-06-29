@@ -1,77 +1,83 @@
-// .clients {
-//   padding-top: 94px;
-//   padding-bottom: 94px;
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-//   &-header {
-//     @extend %h2;
-//   }
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
-//   &-list {
-//     display: flex;
-//     justify-content: space-between;
-//     padding-left: 0;
-//   }
+  h2 {
+    @include h2;
+  }
 
-//   &-card {
-//     width: 170px;
-//     height: 90px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 
-//     border: 1px solid $svgColor;
-//     border-radius: 4px;
-//     fill: $svgColor;
-//     transition: border-color $trDuration $timingFn, fill $trDuration $timingFn;
+  &-card {
+    margin: 15px;
+    height: 90px;
+    width: calc((100% - 2 * 30px) / 2);
 
-//     &:hover,
-//     &:focus {
-//       border-color: $accentColor;
-//       fill: $accentColor;
-//       cursor: pointer;
-//     }
-//   }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-//   &-link {
-//     fill: inherit;
+    border: 1px solid $svgColor;
+    border-radius: 4px;
+    fill: $svgColor;
+    transition: border-color $trDuration $timingFn, fill $trDuration $timingFn;
 
-//     // переделать иконки
-//     /* .clients-logo {
-//   width: 90px;
-//   height: 52px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// } */
+    @media screen and (min-width: $tablet) {
+      width: 210px;
+    }
 
-//     & > .logo-1 {
-//       width: 44px;
-//       height: 49px;
-//     }
+    @media screen and (min-width: $desktop) {
+      width: 170px;
+    }
 
-//     & > .logo-2 {
-//       width: 40px;
-//       height: 52px;
-//     }
+    &:hover,
+    &:focus {
+      border-color: $accentColor;
+      fill: $accentColor;
+      cursor: pointer;
+    }
+  }
 
-//     & > .logo-3 {
-//       width: 41px;
-//       height: 43px;
-//     }
+  &-link {
+    fill: inherit;
 
-//     & > .logo-4 {
-//       width: 80px;
-//       height: 42px;
-//     }
+    & > .logo-1 {
+      width: 44px;
+      height: 49px;
+    }
 
-//     & > .logo-5 {
-//       width: 59px;
-//       height: 47px;
-//     }
+    & > .logo-2 {
+      width: 40px;
+      height: 52px;
+    }
 
-//     & > .logo-6 {
-//       width: 88px;
-//       height: 45px;
-//     }
-//   }
-// }
+    & > .logo-3 {
+      width: 41px;
+      height: 43px;
+    }
+
+    & > .logo-4 {
+      width: 80px;
+      height: 42px;
+    }
+
+    & > .logo-5 {
+      width: 59px;
+      height: 47px;
+    }
+
+    & > .logo-6 {
+      width: 88px;
+      height: 45px;
+    }
+  }
+}
