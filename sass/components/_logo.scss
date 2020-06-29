@@ -1,0 +1,30 @@
+.logo {
+  font-family: $logoFont;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 1.17;
+
+  .page-footer & {
+    color: $titleTextColor;
+  }
+
+  &-accent {
+    color: $accentColor;
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+
+    .page-header & {
+      margin-right: 85px;
+    }
+
+    .page-footer & {
+      margin-bottom: 10px;
+    }
+  }
+}

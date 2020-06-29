@@ -1,0 +1,127 @@
+.portfolio-works-list {
+  padding-left: 0;
+
+  &-item {
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+      /* background-attachment: local;
+  background-origin: border-box; */
+    }
+
+    &:hover .hover-text {
+      opacity: 1;
+    }
+
+    &:hover .portfolio-works-pic:before,
+    &:focus .portfolio-works-pic:before {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &:hover .portfolio-works-pic {
+    border: none;
+  }
+}
+
+.works-ref {
+  text-decoration: none;
+}
+.portfolio-works-pic {
+  position: relative;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+
+  &:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $backgroundTextColor;
+
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity $trDuration $timingFn, transform $trDuration $timingFn;
+
+    border-color: $accentColor;
+  }
+}
+
+.portfolio-works-info {
+  padding: 20px 24px;
+  background-color: $titleTextColor;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.portfolio-works-list h2 {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.portfolio-works-p {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.hover-text {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  align-items: center;
+  top: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: $titleTextColor;
+  opacity: 0;
+  transition: opacity $trDuration $timingFn, transform $trDuration $timingFn;
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+  .portfolio-works-list-item {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .portfolio-works-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .portfolio-works-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    &-item {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .portfolio-works-list-item {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+}

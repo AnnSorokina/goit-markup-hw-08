@@ -1,0 +1,39 @@
+// Миксины
+// @import "../utils/placeholders";
+
+// .applications h2,
+// .teampeople h2,
+// .clients h2
+@mixin h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+@mixin displayNoneBlock($width) {
+  @media screen and (max-width: $width) {
+    display: none;
+  }
+
+  @media screen and (min-width: $width) {
+    display: block;
+  }
+}
+
+// .page-footer {
+//   @include displayNone(1200px);
+// }
+
+// @mixin bordered($color) {
+//   border-top: 1px solid $color;
+//   border-bottom: 1px solid $color;
+// }
