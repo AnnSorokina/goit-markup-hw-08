@@ -12,6 +12,12 @@
 
 .page-header {
   position: relative;
+
+  // @media screen and (max-width: $tablet) {
+  //   .container {
+  //     width: auto;
+  //   }
+  // }
 }
 
 .main-nav {
@@ -81,7 +87,7 @@
   fill: currentColor;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .main-nav {
     height: 60px;
   }
@@ -155,7 +161,7 @@
   }
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (min-width: $tablet) {
   .menu-button {
     display: none;
   }
@@ -167,6 +173,8 @@
 
   .menu-container {
     display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 
   .site-menu {

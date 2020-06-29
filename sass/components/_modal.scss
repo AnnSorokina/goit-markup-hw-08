@@ -12,7 +12,7 @@
 
   overflow-y: scroll;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     padding: 93px 15px;
   }
 
@@ -27,7 +27,7 @@
 
   & > .modal {
     position: absolute;
-    height: 609px;
+    // height: 609px;
     padding: 40px;
 
     background-color: $titleTextColor;
@@ -37,16 +37,22 @@
 
     transition: transform $trDuration $timingFn;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    @media screen and (min-width: $tablet) {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(1);
       width: 450px;
     }
 
-    // @media screen and (min-width: $desktop) {
-    //   height: 581px;
-    // }
+    @media screen and (min-width: $desktop) {
+      width: 528px;
+      //   height: 581px;
+    }
   }
 }
 

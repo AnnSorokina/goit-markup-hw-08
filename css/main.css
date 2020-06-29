@@ -287,6 +287,24 @@ body.modal-open {
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -410,7 +428,7 @@ menu {
   fill: currentColor;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .main-nav {
     height: 60px;
   }
@@ -471,7 +489,7 @@ menu {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -485,6 +503,12 @@ menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .site-menu {
     display: -webkit-box;
@@ -904,7 +928,7 @@ address {
   overflow-y: scroll;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .backdrop {
     padding: 93px 15px;
   }
@@ -922,7 +946,6 @@ address {
 
 .backdrop > .modal {
   position: absolute;
-  height: 609px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -934,13 +957,26 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
+  .backdrop > .modal {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .backdrop > .modal {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
     width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .backdrop > .modal {
+    width: 528px;
   }
 }
 
