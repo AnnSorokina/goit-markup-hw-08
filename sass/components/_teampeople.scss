@@ -95,6 +95,8 @@
 
   &-container > ul {
     display: flex;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   & > a {
@@ -104,9 +106,9 @@
   svg {
     width: 20px;
     height: 20px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &:hover,
