@@ -51,6 +51,10 @@
     border-radius: 4px;
     overflow: hidden;
 
+    // @media screen and (max-width: 1199px) {
+    //   max-width: 450px;
+    // }
+
     @media screen and (min-width: $tablet) {
       width: calc((100% - 2 * 30px) / 2);
     }

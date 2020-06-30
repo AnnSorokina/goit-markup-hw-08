@@ -1,6 +1,6 @@
 .overlay {
   max-width: 1600px;
-  background-size: contain;
+  // background-size: contain;
   // width: 480px;
   height: 400px;
   margin-left: auto;
@@ -10,14 +10,10 @@
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url(../images/header.png);
+    url(../images/headerm.png);
   background-position: center;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-
-  //   @media screen and (min-width: $tablet) {
-
-  //   }
+  background-repeat: no-repeat;
+  background-size: cover;
 
   //   @media screen and (min-width: $tablet) {
   // width: 768px;
@@ -26,12 +22,48 @@
   @media screen and (min-width: $desktop) {
     // width: 1600px;
     height: 600px;
+  }
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (-webkit-min-device-pixel-ratio: 2),
-      screen and (-o-min-device-pixel-ratio: 2/1),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/headert.png);
+  }
+
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/header.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(../images/headerm@2x.png);
+
+    @media screen and (min-width: 481px) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url(../images/headert@2x.png);
+    }
+
+    @media screen and (min-width: 769px) {
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.8),
@@ -44,7 +76,6 @@
   & > h1 {
     margin: 0 auto 30px;
     padding-top: 118px;
-    width: 360px;
 
     color: $titleTextColor;
     font-weight: 900;
@@ -53,6 +84,10 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1199px) {
+      max-width: 360px;
+    }
 
     @media screen and (min-width: $desktop) {
       padding-top: 200px;
