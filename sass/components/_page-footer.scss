@@ -10,6 +10,7 @@
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       justify-content: space-between;
+      margin-bottom: 60px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -39,10 +40,16 @@
 }
 
 .studio-info {
-  text-align: center;
-
   address {
     margin-top: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
   }
 
   @media screen and (min-width: $tablet) {
@@ -91,7 +98,7 @@ address {
   //   }
 
   @media screen and (max-width: 767px) {
-    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   @media screen and (max-width: 1199px) {
@@ -147,7 +154,6 @@ address {
   }
 
   @media screen and (max-width: 1199px) {
-    margin-top: 60px;
     text-align: center;
   }
 
@@ -160,6 +166,7 @@ address {
   }
 
   & > b {
+    display: block;
     margin-bottom: 20px;
   }
 
@@ -176,6 +183,8 @@ address {
   position: relative;
 
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
   }
 }
@@ -184,6 +193,7 @@ address {
   height: 50px;
   padding-left: 16px;
   margin-bottom: 20px;
+  width: 100%;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -194,7 +204,7 @@ address {
   font-size: 16px;
   line-height: 1.25;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
