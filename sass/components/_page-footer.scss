@@ -231,8 +231,15 @@ address {
 
     font-size: 16px;
     line-height: 1.25;
+    opacity: 1;
 
-    transition: transform $trDuration $timingFn;
+    transition: transform $trDuration $timingFn, opacity $trDuration $timingFn;
+
+    @media screen and (max-width: 609px) {
+      .email:focus + & {
+        opacity: 0;
+      }
+    }
 
     @media screen and (min-width: $desktop) {
       bottom: calc(50% - 10px);
