@@ -13,7 +13,7 @@
     @include h2;
   }
 
-  ul {
+  &-list {
     @media screen and (min-width: $tablet) {
       margin: -15px;
       display: flex;
@@ -42,7 +42,6 @@
 
   .teampeople-card {
     width: 100%;
-    padding-bottom: 24px;
     margin: 15px;
 
     background: $titleTextColor;
@@ -68,6 +67,12 @@
       border-top-right-radius: 4px;
       overflow: hidden;
     }
+
+    & > ul {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 24px;
+    }
   }
 }
 
@@ -85,16 +90,6 @@
 
   &:not(:last-child) {
     margin-right: 10px;
-
-    @media screen and (min-width: $tablet) {
-      margin-right: 12px;
-    }
-  }
-
-  &-container {
-    display: flex;
-    // justify-content: space-between;
-    // margin: 0 32px;
   }
 
   &-container > ul {
