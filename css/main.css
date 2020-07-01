@@ -1465,11 +1465,6 @@ address {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-  -webkit-transform: translateX(-50%) scale(0.7);
-          transform: translateX(-50%) scale(0.7);
-}
-
 .backdrop > .modal {
   position: absolute;
   padding: 40px;
