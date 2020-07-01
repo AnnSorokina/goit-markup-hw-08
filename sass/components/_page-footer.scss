@@ -3,6 +3,13 @@
   padding-bottom: 60px;
   background-color: $backgroundFooterColor;
 
+  @media screen and (min-width: $desktop) {
+    &-items {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   .contact-info {
     @media screen and (min-width: $tablet) {
       display: flex;
@@ -216,9 +223,9 @@ address {
 
   &-label {
     position: absolute;
-    top: 50%;
+    bottom: calc(50% + 15px);
     left: 16px;
-    transform: translateY(calc(-50% - 20px));
+    transform: translateY(calc(-50%));
 
     color: $footerTextColor;
 
@@ -226,6 +233,10 @@ address {
     line-height: 1.25;
 
     transition: transform $trDuration $timingFn;
+
+    @media screen and (min-width: $desktop) {
+      bottom: calc(50% - 10px);
+    }
   }
 
   &:focus + label,
