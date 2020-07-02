@@ -602,6 +602,12 @@ menu {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .page-footer .contact-info {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .page-footer .contact-info {
     -webkit-box-pack: justify;
@@ -635,12 +641,6 @@ menu {
 
 .studio-info address {
   margin-top: 20px;
-}
-
-@media screen and (max-width: 767px) {
-  .studio-info {
-    margin-bottom: 60px;
-  }
 }
 
 @media screen and (max-width: 1199px) {

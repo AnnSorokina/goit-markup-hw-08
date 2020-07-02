@@ -15,6 +15,10 @@
       display: flex;
     }
 
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       justify-content: space-between;
       margin-bottom: 60px;
@@ -26,16 +30,6 @@
     }
   }
 }
-
-// .studio-info,
-// .studio-info .address,
-// .social-links,
-// .social-links ul,
-// .social-links li,
-// .subscription,
-// .subscr-input {
-//   display: inline-flex;
-// }
 
 @media screen and (min-width: $tablet) {
   .studio-info,
@@ -49,10 +43,6 @@
 .studio-info {
   address {
     margin-top: 20px;
-  }
-
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
   }
 
   @media screen and (max-width: 1199px) {

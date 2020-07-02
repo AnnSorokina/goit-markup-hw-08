@@ -602,6 +602,12 @@ menu {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .page-footer .contact-info {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .page-footer .contact-info {
     -webkit-box-pack: justify;
@@ -635,12 +641,6 @@ menu {
 
 .studio-info address {
   margin-top: 20px;
-}
-
-@media screen and (max-width: 767px) {
-  .studio-info {
-    margin-bottom: 60px;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1472,6 +1472,11 @@ address {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  -webkit-transform: translateX(-50%) scale(0.7);
+          transform: translateX(-50%) scale(0.7);
+}
+
 .backdrop > .modal {
   position: relative;
   padding: 40px;
@@ -1485,11 +1490,11 @@ address {
 @media screen and (min-width: 480px) {
   .backdrop > .modal {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
     width: 450px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, 0) scale(1);
+            transform: translate(-50%, 0) scale(1);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
