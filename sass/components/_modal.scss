@@ -12,8 +12,8 @@
 
   overflow-y: scroll;
 
-  @media screen and (max-width: 767px) {
-    padding: 93px 15px;
+  @media screen and (max-width: 480px) {
+    padding: 94px 15px;
   }
 
   &.is-hidden {
@@ -26,28 +26,34 @@
   }
 
   & > .modal {
-    position: absolute;
     // height: 609px;
+    position: relative;
     padding: 40px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    width: 100%;
 
     background-color: $titleTextColor;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 
-    transition: transform $trDuration $timingFn;
-
-    @media screen and (max-width: 767px) {
-      width: 100%;
-      max-width: 450px;
-    }
-
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $mobile) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
       width: 450px;
+
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform $trDuration $timingFn;
     }
+
+    // @media screen and (max-width: 767px) {
+    //   width: 100%;
+    //   max-width: 450px;
+    // }
+
+    // @media screen and (min-width: $tablet) {
+    //   width: 450px;
+    // }
 
     @media screen and (min-width: $desktop) {
       width: 528px;
